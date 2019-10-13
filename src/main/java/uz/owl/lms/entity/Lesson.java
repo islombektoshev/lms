@@ -1,19 +1,32 @@
 package uz.owl.lms.entity;
 
-import lombok.Data;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
-@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Lesson {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String theme;
-    private String abstractOfTheme;
+
+    private Time time;
+
+    private Integer currentTopicId;
 
     @ManyToOne
-    @JoinColumn(nullable = false,name = "subgroup_id")
-    private SubGroup subGroup;
+    private SubGroup parent;
+
+    @OneToMany
+    private final List<Topic> topics = new ArrayList<>();
+
+    @ManyToOne
+    private Room onRoom;
 }

@@ -1,5 +1,7 @@
 package uz.owl.lms.entity;
 
+import lombok.*;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
@@ -8,6 +10,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode(callSuper = false)
 public class Teacher extends User {
     private Long activeTeacherProfile;
 

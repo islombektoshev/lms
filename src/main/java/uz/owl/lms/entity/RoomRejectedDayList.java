@@ -12,18 +12,13 @@ import javax.persistence.*;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class StudentTask {
+public class RoomRejectedDayList {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Integer rate;
 
-    @JoinColumn(nullable = false)
     @ManyToOne
-    private StudentProfile studentProfile;
+    private Room room;
 
-    @JoinColumn(nullable = false)
-    @ManyToOne
-    private SelfStudy selfStudy;
-
+    private Time time;
 }

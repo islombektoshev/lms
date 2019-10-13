@@ -11,38 +11,24 @@ import java.util.List;
 
 @Entity
 @Data
+@Table(name = "room")
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class SubGroup {
+public class Room {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
-    private GroupType groupType;
-
-    @ManyToOne
-    private Group parentGroup;
-
-    @ManyToOne
-    private Teacher teacher;
+    @Column(unique = false, nullable = false)
+    private String roomId;
 
     @Column(nullable = false)
-    private Integer lessonCount;
+    private Integer size;
 
-    @OneToMany
-    private final List<SelfStudy> selfStudies = new ArrayList<>();
+    @OneToMany(mappedBy = "room")
+    private final List<RoomRejectedDayList> roomRejectedDays = new ArrayList<>();
 
-    @OneToMany
+    @OneToMany(mappedBy = "onRoom")
     private final List<Lesson> lessons = new ArrayList<>();
-
-    public enum GroupType {
-        LECTURE,
-        PRACTICE,
-        LABORATORY;
-
-        private GroupType() {
-        }
-    }
 }

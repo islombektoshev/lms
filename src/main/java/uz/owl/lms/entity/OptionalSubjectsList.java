@@ -1,10 +1,17 @@
 package uz.owl.lms.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class OptionalSubjectsList {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,9 +20,9 @@ public class OptionalSubjectsList {
     @ManyToMany(mappedBy = "optionalSubjectsLists")
     private final List<Subject> subjects = new ArrayList<>();
 
-    @OneToOne
+    @OneToOne(mappedBy = "optionalSubjectsList")
     private Faculty faculty;
 
-    @OneToOne
+    @OneToOne(mappedBy = "optionalSubjectsList")
     private Semester semester;
 }

@@ -12,18 +12,14 @@ import javax.persistence.*;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class StudentTask {
+public class Topic {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Integer rate;
+    private String theme;
+    private String abstractOfTheme;
 
-    @JoinColumn(nullable = false)
     @ManyToOne
-    private StudentProfile studentProfile;
-
-    @JoinColumn(nullable = false)
-    @ManyToOne
-    private SelfStudy selfStudy;
-
+    @JoinColumn(nullable = false, name = "subgroup_id")
+    private Lesson lesson;
 }
