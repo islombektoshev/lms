@@ -1,24 +1,23 @@
 package uz.owl.lms.entity;
 
+import lombok.Data;
+
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
-public class Faculty {
+@Data
+public class Semester {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(unique = true)
     private String name;
 
-    @OneToMany(mappedBy = "faculty")
-    private final List<Student> students = new ArrayList<>();
+    private String dateString;
 
     @OneToOne
     private MandatorySubjectsList mandatorySubjectsList;
 
     @OneToOne
-    private OptionalSubjectsList optionalSubjectsList;
+    private OptionalSubjectsList optionalSubjectsList   ;
 }

@@ -27,6 +27,12 @@ public class SubGroup {
     private final List<SelfStudy> selfStudies = new ArrayList<>();
 
     @OneToMany
+    private final List<Lesson> lessons = new ArrayList<>();
+
+    /**
+     * this give evry weak times and times count give how much lesson in a weak
+     */
+    @OneToMany
     private final List<TimeTableForSubGroup> timeTableForSubGroups = new ArrayList<>();
 
     public static enum GroupType {

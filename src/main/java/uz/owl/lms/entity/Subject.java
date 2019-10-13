@@ -28,4 +28,9 @@ public class Subject {
     @ManyToMany
     private final List<StudentProfile> studentProfiles = new ArrayList<>();
 
+    @ManyToMany
+    private final List<MandatorySubjectsList> mandatorySubjectsLists = new ArrayList<>();
+
+    @ManyToMany
+    private final List<OptionalSubjectsList> optionalSubjectsLists = new ArrayList<>();
 }
