@@ -26,9 +26,16 @@ public class Room {
     @Column(nullable = false)
     private Integer size;
 
+    /**
+     * Bu listda shu xonaga dars bo'lishi mumkinmas kunlarni ko'rsatilgan
+     */
     @OneToMany(mappedBy = "room")
     private final List<RoomRejectedDayList> roomRejectedDays = new ArrayList<>();
 
+    /**
+     * Bu xonada qaysi fanlar bo'lishini bildiradi
+     * bu orqali shu xonadan dars bo'ladigan kularni olish mumkin
+     */
     @OneToMany(mappedBy = "onRoom")
     private final List<Lesson> lessons = new ArrayList<>();
 }

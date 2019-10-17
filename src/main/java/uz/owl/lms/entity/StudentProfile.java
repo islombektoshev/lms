@@ -33,6 +33,9 @@ public class StudentProfile {
     @ManyToOne
     private Student profileOwner;
 
+    @ManyToOne
+    private Semester semester;
+
     @OneToMany(mappedBy = "studentProfile")
     private final List<StudentTask> studentTasks = new ArrayList<>();
 

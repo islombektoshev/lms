@@ -16,8 +16,6 @@ public class InitTestService {
     private final FacultyDao facultyDao;
     private final GroupDao groupDao;
     private final LessonDao lessonDao;
-    private final MandatorySubjectsListDao mandatorySubjectsListDao;
-    private final OptionalSubjectsListDao optionalSubjectsListDao;
     private final RoleDao roleDao;
     private final RoomDao roomDao;
     private final SelfStudyDao selfStudyDao;
@@ -32,12 +30,10 @@ public class InitTestService {
     private final TeacherProfileDao teacherProfileDao;
 
 
-    public InitTestService(FacultyDao facultyDao, GroupDao groupDao, LessonDao lessonDao, MandatorySubjectsListDao mandatorySubjectsListDao, OptionalSubjectsListDao optionalSubjectsListDao, RoleDao roleDao, RoomDao roomDao, SelfStudyDao selfStudyDao, SemesterDao semesterDao, SubjectDao subjectDao, StudentProfileDao studentProfileDao, StudentTaskDao studentTaskDao, SubGroupDao subGroupDao, TeacherDao teacherDao, TopicDao topicDao, UserDao userDao, TeacherProfileDao teacherProfileDao) {
+    public InitTestService(FacultyDao facultyDao, GroupDao groupDao, LessonDao lessonDao, RoleDao roleDao, RoomDao roomDao, SelfStudyDao selfStudyDao, SemesterDao semesterDao, SubjectDao subjectDao, StudentProfileDao studentProfileDao, StudentTaskDao studentTaskDao, SubGroupDao subGroupDao, TeacherDao teacherDao, TopicDao topicDao, UserDao userDao, TeacherProfileDao teacherProfileDao) {
         this.facultyDao = facultyDao;
         this.groupDao = groupDao;
         this.lessonDao = lessonDao;
-        this.mandatorySubjectsListDao = mandatorySubjectsListDao;
-        this.optionalSubjectsListDao = optionalSubjectsListDao;
         this.roleDao = roleDao;
         this.roomDao = roomDao;
         this.selfStudyDao = selfStudyDao;

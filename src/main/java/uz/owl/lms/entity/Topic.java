@@ -21,5 +21,5 @@ public class Topic {
 
     @ManyToOne
     @JoinColumn(nullable = false, name = "subgroup_id")
-    private Lesson lesson;
+    private SubGroup subGroup;
 }

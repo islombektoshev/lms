@@ -25,9 +25,6 @@ public class Faculty {
     @OneToMany(mappedBy = "faculty")
     private final List<Student> students = new ArrayList<>();
 
-    @OneToOne
-    private MandatorySubjectsList mandatorySubjectsList;
-
-    @OneToOne
-    private OptionalSubjectsList optionalSubjectsList;
+    @ManyToMany
+    private final List<Course> courses = new ArrayList<>();
 }

@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Data
@@ -21,9 +23,9 @@ public class Semester {
 
     private String dateString;
 
-    @OneToOne
-    private MandatorySubjectsList mandatorySubjectsList;
+    @ManyToMany
+    private final List<Course> courses = new ArrayList<>();
 
-    @OneToOne
-    private OptionalSubjectsList optionalSubjectsList   ;
+    @OneToMany(mappedBy = "semester")
+    private final List<StudentProfile> studentProfiles = new ArrayList<>();
 }

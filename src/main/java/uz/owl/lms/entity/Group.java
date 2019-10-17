@@ -28,7 +28,31 @@ public class Group {
     @ManyToMany
     private final List<StudentProfile> students = new ArrayList<>();
 
+    @Column(nullable = false)
+    public Integer lectureCount;
 
+    @Column(nullable = false)
+    public Integer practiceCount;
+
+    @Column(nullable = false)
+    public Integer laboratoryCount;
+
+    /**
+     * Bu sub guruhlarni saqlaydi Sub guruhlar Lecture Labaratory va pratice bo'lishi mumlin
+     * bir huruhda bir lecture va bittadan ko'p laboratory va practice
+     * bo'lishi kerak
+     * example
+     * Fizika001:
+     * Fizika001 lecture
+     *
+     * Fizika001-1 practice
+     * Fizika001-2 practice
+     *
+     * Fizika001-L1 laboratory
+     * Fizika001-L2 laboratory
+     * Fizika001-L3 laboratory
+     * Fizika001-L4 laboratory
+     */
     @OneToMany(mappedBy = "parentGroup")
     private final List<SubGroup> subGroups = new ArrayList<>();
 

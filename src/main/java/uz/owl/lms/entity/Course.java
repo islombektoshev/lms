@@ -14,17 +14,19 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class MandatorySubjectsList {
+public class Course {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToMany(mappedBy = "mandatorySubjectsLists")
+    private String name;
+
+    @OneToMany(mappedBy = "course")
     private final List<Subject> subjects = new ArrayList<>();
 
-    @OneToOne(mappedBy = "mandatorySubjectsList")
-    private Faculty faculty;
+    @ManyToMany(mappedBy = "courses")
+    private final List<Faculty>  faculties = new ArrayList<>();
 
-    @OneToOne(mappedBy = "mandatorySubjectsList")
-    private Semester semester;
+    @ManyToMany(mappedBy = "courses")
+    private final List<Semester>  semesters = new ArrayList<>();
 }

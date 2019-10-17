@@ -24,9 +24,6 @@ public class Lesson {
     @ManyToOne
     private SubGroup parent;
 
-    @OneToMany
-    private final List<Topic> topics = new ArrayList<>();
-
     @ManyToOne
     private Room onRoom;
 }

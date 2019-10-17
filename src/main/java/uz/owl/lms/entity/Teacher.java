@@ -26,8 +26,4 @@ public class Teacher extends User {
 
     @ManyToMany(mappedBy = "specialists")
     private final List<Subject> specializations = new ArrayList<>();
-
-    @OneToMany(mappedBy = "teacher")
-    private final List<SubGroup> teacherGroups = new ArrayList<>();
-
 }
