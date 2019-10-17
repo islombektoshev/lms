@@ -23,6 +23,16 @@ public class Room {
     @Column(unique = false, nullable = false)
     private String roomId;
 
+    /**
+     * Bu room ning turini saqlaydi bu faqat room aloqador
+     * subjectlar bo'lgandagina foydali bo'ladi
+     */
+    @Column(nullable = false)
+    private RoomType roomType;
+
+    @ManyToMany(mappedBy = "specialRooms")
+    private final List<Subject> subjects = new ArrayList<>();
+
     @Column(nullable = false)
     private Integer size;
 
@@ -38,4 +48,11 @@ public class Room {
      */
     @OneToMany(mappedBy = "onRoom")
     private final List<Lesson> lessons = new ArrayList<>();
+
+    public enum RoomType {
+        LECTURE,
+        PRACTICE,
+        LABORATORY,
+        ALL
+    }
 }

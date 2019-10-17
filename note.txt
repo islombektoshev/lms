@@ -1,0 +1,11 @@
+todo
+    1 - make some subjects and make Courses and add subjects to courses
+    2 - make Faculty and semesters add some courses
+    3 - make some teachers add her or hims subjects
+    4 - add rooms if its not enough app shouldn't work and it demand some room
+    5 - create groups if there are enough teacher power else add some teacher
+    6 - add mandatory subjects to student and student should choose some optional subjects with teacher
+    7 - create time table and choose rooms
+    _       there are some constrains to choose rooms and times
+    _       Room type subjects
+

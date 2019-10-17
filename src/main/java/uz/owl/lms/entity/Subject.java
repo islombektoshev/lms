@@ -22,6 +22,24 @@ public class Subject {
     @Column(unique = true, nullable = false)
     private String subjectName;
 
+    /**
+     * this some statistics to get teacher's powers
+     */
+    @Column(nullable = false)
+    private Integer lectureCountInWeak;
+
+    @Column(nullable = false)
+    private Integer laboratoryCountInWeak;
+
+    @Column(nullable = false)
+    private Integer practiceCountInWeak;
+
+    @Column(nullable = false)
+    private Integer laboratoryGroupCount;
+
+    @Column(nullable = false)
+    private Integer practiceGroupCount;
+
     @OneToMany(mappedBy = "subject")
     private final List<Group> groups = new ArrayList<>();
 
@@ -30,6 +48,9 @@ public class Subject {
      */
     @ManyToMany
     private final List<Teacher> specialists = new ArrayList<>();
+
+    @ManyToMany
+    private final List<Room> specialRooms = new ArrayList<>();
 
     @ManyToMany
     private final List<StudentProfile> studentProfiles = new ArrayList<>();

@@ -52,7 +52,7 @@ public class SubGroup {
      * Lessonlar haftasiga suguruhga bo'ladigan darslarni saqlaydi
      * masalan Fizika001 dushanba 2-para va seshanba 3-para bo'lishi mumkin
      */
-    @OneToMany
+    @OneToMany(mappedBy = "parent")
     private final List<Lesson> lessons = new ArrayList<>();
 
     public enum GroupType {
