@@ -7,6 +7,9 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
+/**
+ * O'qituvhi berga {@link SelfStudy}ga qoyilgan javob
+ */
 @Entity
 @Data
 @Builder

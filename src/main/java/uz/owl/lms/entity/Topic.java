@@ -7,6 +7,9 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
+/**
+ * Mavzula
+ */
 @Entity
 @Data
 @Builder
@@ -16,7 +19,13 @@ public class Topic {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    /**
+     * mavzu nomi
+     */
     private String theme;
+    /**
+     * qisqacha tushuncha
+     */
     private String abstractOfTheme;
 
     @ManyToOne

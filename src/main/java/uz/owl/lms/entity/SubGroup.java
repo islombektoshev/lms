@@ -10,6 +10,9 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Bu har bir guruhni turlarga bo'lish uchun ishlatiladi {@this#GroupType} ga qarang
+ */
 @Entity
 @Data
 @Builder

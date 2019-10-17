@@ -9,6 +9,9 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Room Xonalarni saqlash uchun kerak
+ */
 @Entity
 @Data
 @Table(name = "room")
@@ -30,6 +33,9 @@ public class Room {
     @Column(nullable = false)
     private RoomType roomType;
 
+    /**
+     * Xona qaysi fanlar uchun mosligini ko'rsatadi
+     */
     @ManyToMany(mappedBy = "specialRooms")
     private final List<Subject> subjects = new ArrayList<>();
 

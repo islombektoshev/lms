@@ -9,6 +9,9 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * {@link Faculty} bu {@link Student}ning bir xususiayti bo'lib u fanlarni tanlash ucun kerak bo'ladi
+ */
 @Entity
 @Data
 @Builder

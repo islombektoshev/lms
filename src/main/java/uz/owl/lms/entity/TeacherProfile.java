@@ -28,6 +28,9 @@ public class TeacherProfile {
     @CreationTimestamp
     public LocalDateTime createdDateTime;
 
+    /**
+     * Bu shu profileda qanchalik dars olishini kuchi borligii berlgilash uchun ishlatiladi
+     */
     @Column(nullable = false)
     @ColumnDefault("999999")
     public Integer laboratoryCount;

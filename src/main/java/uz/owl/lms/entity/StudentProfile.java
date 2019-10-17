@@ -11,6 +11,10 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Student profile li student ning har semester o'zgaradigan
+ * ma'lumotlari shu yerda saqlanadi
+ */
 @Entity
 @Data
 @Builder
@@ -36,6 +40,7 @@ public class StudentProfile {
     @ManyToOne
     private Semester semester;
 
+    // TODO: 10/17/2019 yana bir tekxhirish kerak
     @OneToMany(mappedBy = "studentProfile")
     private final List<StudentTask> studentTasks = new ArrayList<>();
 

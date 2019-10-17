@@ -9,6 +9,9 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Studentnig xususiyatlaridan biri bo'lib fan tanlash uchun ishlatiladi
+ */
 @Entity
 @Data
 @Builder

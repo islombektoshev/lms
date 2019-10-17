@@ -23,7 +23,7 @@ public class Subject {
     private String subjectName;
 
     /**
-     * this some statistics to get teacher's powers
+     * bu qancha o'qituvhi kerak bo'lishini hissoblash uchun statistikadir
      */
     @Column(nullable = false)
     private Integer lectureCountInWeak;

@@ -11,6 +11,10 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * O'qituvchi {@link SubGroup}ga qo'ygan vazifasi
+ * Bu barcha subguruh studentlariga ko'rinadi
+ */
 @Entity
 @Data
 @Builder

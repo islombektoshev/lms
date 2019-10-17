@@ -7,6 +7,9 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
+/**
+ * Xonada Bo'lishi dars mumkin bo'lmagan  timlarni saqlaydi
+ */
 @Entity
 @Data
 @Builder

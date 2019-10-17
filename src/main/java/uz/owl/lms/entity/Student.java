@@ -19,8 +19,7 @@ import java.util.List;
 public class Student extends User {
     public Student(String name, String lastName, String username,
                    String password, Boolean enabled,
-                   Faculty faculty, Long activeProfileId)
-    {
+                   Faculty faculty, Long activeProfileId) {
         super(name, lastName, username, password, enabled);
         this.faculty = faculty;
         this.activeProfileId = activeProfileId;
@@ -29,8 +28,15 @@ public class Student extends User {
     @ManyToOne
     private Faculty faculty;
 
+    /**
+     * Student uchun profile bu studentda barcha semster hatto qaytib oqigan sesmterlariniham
+     * ko'rish imkonini beradi
+     */
     @OneToMany(mappedBy = "profileOwner")
     private final List<StudentProfile> studentProfiles = new ArrayList<>();
 
+    /**
+     * ayni paytda qaysi profile student uchun active ligni bildiradi
+     */
     private Long activeProfileId;
 }

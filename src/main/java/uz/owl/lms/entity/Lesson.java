@@ -8,6 +8,10 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Lesson Bir {@link SubGroup} subguruhni Bir haftada bo'ladigan darslarini
+ * ro'yxat qilish uchun kerak bunda Time va Room bor
+ */
 @Entity
 @Builder
 @NoArgsConstructor

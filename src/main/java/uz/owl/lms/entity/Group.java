@@ -9,6 +9,10 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Group Bu fanlarning guruhlarga bo'lishdan kelib chiqqan narsa
+ * misol uchun Fizika fanidan guruhlar
+ */
 @Entity
 @Table(name = "group_lms")
 @Data
